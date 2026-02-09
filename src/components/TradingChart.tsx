@@ -36,25 +36,25 @@ export function TradingChart({ onChartReady }: TradingChartProps) {
     const chart = createChart(containerRef.current, {
       layout: {
         background: { type: ColorType.Solid, color: "transparent" },
-        textColor: "hsl(215, 12%, 50%)",
+        textColor: "#6b7280",
         fontFamily: "'JetBrains Mono', monospace",
         fontSize: 11,
       },
       grid: {
-        vertLines: { color: "hsl(220, 14%, 10%)" },
-        horzLines: { color: "hsl(220, 14%, 10%)" },
+        vertLines: { color: "#161a22" },
+        horzLines: { color: "#161a22" },
       },
       crosshair: {
         mode: CrosshairMode.Normal,
-        vertLine: { color: "hsl(215, 12%, 30%)", width: 1, style: 3, labelBackgroundColor: "hsl(220, 18%, 14%)" },
-        horzLine: { color: "hsl(215, 12%, 30%)", width: 1, style: 3, labelBackgroundColor: "hsl(220, 18%, 14%)" },
+        vertLine: { color: "#3f4654", width: 1, style: 3, labelBackgroundColor: "#1e2330" },
+        horzLine: { color: "#3f4654", width: 1, style: 3, labelBackgroundColor: "#1e2330" },
       },
       rightPriceScale: {
-        borderColor: "hsl(220, 14%, 14%)",
+        borderColor: "#1e2330",
         scaleMargins: { top: 0.1, bottom: 0.1 },
       },
       timeScale: {
-        borderColor: "hsl(220, 14%, 14%)",
+        borderColor: "#1e2330",
         timeVisible: true,
         secondsVisible: false,
       },
@@ -63,12 +63,12 @@ export function TradingChart({ onChartReady }: TradingChartProps) {
     });
 
     const series = chart.addCandlestickSeries({
-      upColor: "hsl(142, 60%, 50%)",
-      downColor: "hsl(0, 72%, 55%)",
-      borderUpColor: "hsl(142, 60%, 50%)",
-      borderDownColor: "hsl(0, 72%, 55%)",
-      wickUpColor: "hsl(142, 60%, 45%)",
-      wickDownColor: "hsl(0, 72%, 50%)",
+      upColor: "#22c55e",
+      downColor: "#ef4444",
+      borderUpColor: "#22c55e",
+      borderDownColor: "#ef4444",
+      wickUpColor: "#16a34a",
+      wickDownColor: "#dc2626",
     });
 
     chartRef.current = chart;
